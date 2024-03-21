@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>PetFax</title>
+
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script> 
+
+     <!-- Google fonts used in this template -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Welcome to PetFax</h1>
+    <!-- {% for pet in pets %}
+        <h2>{{ pet.pet_name }}</h2>
+        <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+    {% endfor %} -->
+
+        <ul>
+        {% for pet in pets %}
+            <li>
+                <h2>{{ pet.pet_name }}</h2>
+                <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+                <a href="{{ url_for('pets.show', pet_id=pet.pet_id) }}">View Details</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+<a href="{{ url_for('facts.index') }}">Add New Fact</a>
+
+</body>
+
+
+</html>
