@@ -1,0 +1,159 @@
+
+
+/* General Styling */
+body {
+     font-family: 'Open Sans', 'Montserrat', 'Roboto', sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #F4F4F9;
+     color: #333;
+}
+
+h1,
+h2 {
+     margin: 0;
+     padding: 0;
+}
+
+/* Header and Navigation */
+header {
+     background-color: #D5F8F5;
+     padding: 10px 20px;
+     text-align: center;
+     border-bottom: 3px solid #96171B;
+}
+
+.web-title h1 {
+     font-size: 36px;
+     color: #96171B;
+}
+
+#menu ul {
+     list-style-type: none;
+     padding: 0;
+     margin: 20px 0;
+     display: flex;
+     justify-content: center;
+}
+
+#menu ul li {
+     margin: 0 15px;
+}
+
+#menu ul li a {
+     text-decoration: none;
+     color: #333;
+     font-size: 18px;
+     font-weight: bold;
+     padding: 10px 15px;
+     border-radius: 5px;
+     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#menu ul li a:hover {
+     background-color: #96171B;
+     color: white;
+}
+
+/* Pet List Styling */
+.pet-list {
+     max-width: 1200px;
+     margin: 20px auto;
+     padding: 0 20px;
+}
+
+.pet-list ul {
+     list-style: none;
+     padding: 0;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     justify-content: center;
+}
+
+.pet-item {
+     background-color: white;
+     border: 2px solid #D5F8F5;
+     border-radius: 10px;
+     padding: 20px;
+     width: calc(33% - 40px);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-item:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pet-name {
+     font-size: 24px;
+     color: #96171B;
+     margin-bottom: 10px;
+}
+
+.pet-photo {
+     max-width: 100%;
+     border-radius: 5px;
+     margin-bottom: 15px;
+}
+
+.details-link {
+     display: inline-block;
+     margin-top: 10px;
+     padding: 10px 15px;
+     background-color: #558CEA;
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+     border-radius: 5px;
+     transition: background-color 0.3s ease;
+}
+
+.details-link:hover {
+     background-color: #96171B;
+}
+
+/* Add Fact Button */
+.add-fact {
+     text-align: center;
+     margin-top: 30px;
+}
+
+.add-fact-btn {
+     background-color: #96171B;
+     color: white;
+     padding: 15px 30px;
+     text-decoration: none;
+     font-size: 18px;
+     border-radius: 5px;
+     font-weight: bold;
+     transition: background-color 0.3s ease;
+}
+
+.add-fact-btn:hover {
+     background-color: #558CEA;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+     #menu ul {
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+     }
+
+     #menu ul li {
+          margin-bottom: 10px;
+     }
+
+     .pet-item {
+          width: calc(100% - 40px);
+     }
+
+     .add-fact-btn {
+          font-size: 16px;
+          padding: 10px 20px;
+     }
+}

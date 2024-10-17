@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Facts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='facts_index.css') }}">
 </head>
-    <body>
+<body>
     <div class="container">
-        <H1>UserFax</H1>
+        <h1>Cool Facts!</h1>
         {% for fact in facts %}
-            <H4>Submitted by {{ fact.submitter }}</H4>
-            {{ fact.fact }}
+            <div class="fact">
+                <h4>Submitted by: <span class="submitter">{{ fact.submitter }}</span></h4>
+                <p class="fact-text">{{ fact.fact }}</p>
+            </div>
         {% endfor %}
+        <a href="/pets" class="back-btn">Go Back</a>
     </div>
 </body>
- 
 </html>

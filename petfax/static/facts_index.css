@@ -1,0 +1,65 @@
+/* General styles */
+body {
+     font-family: 'Open Sans', sans-serif;
+     background-color: #f4f4f9;
+     margin: 0;
+     padding: 0;
+}
+
+/* Container for facts */
+.container {
+     max-width: 800px;
+     margin: 50px auto;
+     padding: 20px;
+     background-color: #ffffff;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+}
+
+/* Title styling */
+h1 {
+     font-size: 36px;
+     font-weight: 700;
+     color: #333;
+     text-align: center;
+}
+
+/* Fact styling */
+.fact {
+     margin: 20px 0;
+     padding: 15px;
+     border: 1px solid #e1e1e1;
+     border-radius: 5px;
+     background-color: #f9f9f9;
+}
+
+/* Submitter styling */
+.submitter {
+     font-weight: bold;
+     color: #96171B;
+}
+
+/* Fact text styling */
+.fact-text {
+     font-size: 18px;
+     color: #555;
+}
+
+/* Back button styling */
+.back-btn {
+     display: inline-block;
+     margin-top: 20px;
+     padding: 10px 20px;
+     background-color: #96171B;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 4px;
+     font-size: 16px;
+     font-weight: 600;
+     text-align: center;
+}
+
+.back-btn:hover {
+     background-color: #7a1015;
+     transition: 0.3s;
+}

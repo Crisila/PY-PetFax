@@ -1,0 +1,64 @@
+/* General styles */
+body {
+     font-family: 'Open Sans', sans-serif;
+     background-color: #f4f4f9;
+     margin: 0;
+     padding: 0;
+}
+
+/* Container for pet details */
+.container {
+     max-width: 800px;
+     margin: 50px auto;
+     padding: 20px;
+     text-align: center;
+     background-color: #fff;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+}
+
+/* Pet name styling */
+.pet-details h1 {
+     font-size: 36px;
+     font-weight: 700;
+     color: #333;
+}
+
+/* Pet fact styling */
+.fact {
+     font-size: 18px;
+     font-weight: 400;
+     margin: 20px 0;
+     color: #555;
+}
+
+/* Pet photo styling */
+.pet-photo {
+     max-width: 100%;
+     height: auto;
+     border-radius: 8px;
+     margin: 20px 0;
+}
+
+/* Back button styling */
+.back-btn {
+     display: inline-block;
+     margin-top: 20px;
+     padding: 10px 20px;
+     background-color: #96171B;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 4px;
+     font-size: 16px;
+     font-weight: 600;
+}
+
+.back-btn i {
+     margin-right: 8px;
+}
+
+/* Hover effect for back button */
+.back-btn:hover {
+     background-color: #7a1015;
+     transition: 0.3s;
+}

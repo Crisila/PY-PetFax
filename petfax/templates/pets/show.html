@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Adotable pets</title>
-      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-     
-     <!-- Font Awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoptable Pet - {{ pet.pet_name }}</title>
 
-     <!-- Google fonts used in this template -->
-     <link rel="preconnect" href="https://fonts.gstatic.com">
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Link to the CSS file stored in the 'static' folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='pets_show.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-     <h1>{{ pet.pet_name }}</h1>
-     <p>Pet Fact: {{ pet.pet_fact }}</p>
-    <img src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}"/>
+    <div class="container">
+        <div class="pet-details">
+            <h1>{{ pet.pet_name }}</h1>
+            <p class="fact">Pet Fact: {{ pet.pet_fact }}</p>
+            <img src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}" class="pet-photo" />
+        </div>
 
-         <a href="/pets">Go Back</a>
+        <a href="/pets" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+    </div>
 </body>
 </html>
